@@ -2,7 +2,6 @@ package com.map.google.contactapp;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 /**
  * Created by levia4 on 29-05-2017.
@@ -107,14 +104,14 @@ public class DeletedItemAdapter extends BaseAdapter {
                 if(allDeletedList.size()!=0) {
                     DeletedListActivity.mAdapter = new DeletedItemAdapter(context, allDeletedList);
                     DeletedListActivity.deleted_listview.setAdapter(DeletedListActivity.mAdapter);
-                    DeletedListActivity.mAdapter.notifyDataSetChanged();
-                }else {
+                    //DeletedListActivity.mAdapter.notifyDataSetChanged();
+                }/*else {
                     DeletedListActivity.mAdapter.notifyDataSetChanged();
                     Intent intent = new Intent(context, HomeActivity.class);
                     intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
                     context.getApplicationContext().startActivity(intent);
-                }
-                //DeletedListActivity.mAdapter.notifyDataSetChanged();
+                }*/
+                DeletedListActivity.mAdapter.notifyDataSetChanged();
             }
         });
         return convertView;

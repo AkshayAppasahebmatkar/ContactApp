@@ -120,11 +120,11 @@ public class FavouritesItemAdapter extends BaseAdapter {
                 if(allFavouritesList.size()!=0) {
                     FavouritesListActivity.mAdapter = new FavouritesItemAdapter(context, allFavouritesList);
                     FavouritesListActivity.favourites_listview.setAdapter(FavouritesListActivity.mAdapter);
-                }else {
+                }/*else {
                     Intent intent = new Intent(context, HomeActivity.class);
                     intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
                     context.getApplicationContext().startActivity(intent);
-                }
+                }*/
                 FavouritesListActivity.mAdapter.notifyDataSetChanged();
             }
         });

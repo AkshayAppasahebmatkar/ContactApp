@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,6 +40,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private static final int SEND_SMS_PERMISSION_CONSTANT = 104;
     private static final int CALL_PHONE_PERMISSION_CONSTANT = 104;
     Animation animMoveToTop;
+    private Boolean exit = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,5 +156,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
 
+        }
+
+        return;
+    }
 }

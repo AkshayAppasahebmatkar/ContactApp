@@ -26,8 +26,8 @@ public class DeletedListActivity extends AppCompatActivity {
         context = this.getApplicationContext();
         allDeletedList = DBAdapter.getAllDeletedContactList();
         overridePendingTransition(R.animator.enter_from_right,R.animator.exit_to_left);
-        mAdapter = new DeletedItemAdapter(getApplicationContext(), allDeletedList);
         deleted_listview = (ListView) findViewById(R.id.deleted_listview);
+        mAdapter = new DeletedItemAdapter(getApplicationContext(), allDeletedList);
         deleted_listview.setAdapter(mAdapter);
         @SuppressLint("ResourceType")
         Animation animMoveToTop = AnimationUtils.loadAnimation(getApplicationContext(), R.animator.move);
