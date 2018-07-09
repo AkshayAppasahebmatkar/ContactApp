@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:weightSum="6">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_launcher_background"/>
+            <TextView
+                android:id="@+id/name_first_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="A"
+                android:gravity="center"
+                android:background="#3d51b4"
+                android:textSize="25sp"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Akshay Matkar"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="8806159699"
+                android:gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.2">
+            <ImageView
+                android:id="@+id/recall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/refresh"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
